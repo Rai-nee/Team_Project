@@ -7,6 +7,10 @@
   --dark-primary: rgb(26, 27, 34);
   --dark-secondary: rgb(31, 33, 40);
 }
+
+* {
+  transition: all 0.3s ease-in-out;
+}
 div.light {
   background-color: var(--light-primary);
 }
@@ -50,6 +54,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: monospace;
 }
 
 div {
@@ -91,7 +96,7 @@ div.phone {
   flex-direction: column;
   box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.188);
   height: 75vh;
-  width: 25vw;
+  width: 30vw;
   border-radius: 20px;
 }
 
