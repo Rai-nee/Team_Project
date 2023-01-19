@@ -6,6 +6,7 @@
 body {
     font-family: 'Helvetica';
     margin: 0;
+    overflow-x: hidden !important;
 }
 
 section {
@@ -13,11 +14,13 @@ section {
 }
 
 
-/* nav {
+nav {
     position: fixed;
-    background: white;
+    background-color: white;
     width: 100vw;
-} */
+    z-index: 99;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.188);
+}
 
 #overlay {
     width: 100%;
@@ -147,6 +150,7 @@ section {
     width:100%;
     display:block;
     height:60%;
+    object-fit: cover;
 }
 .info{
     display: flex;
@@ -248,7 +252,7 @@ section {
     width: 100vw;
     height: 100vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     font-family: monospace;
     align-items: center;
   }
@@ -295,8 +299,8 @@ section {
     display: flex;
     flex-direction: column;
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.188);
-    height: 75vh;
-    width: 30vw;
+    height: 75%;
+    width: 30%;
     border-radius: 20px;
   }
   
@@ -327,7 +331,6 @@ section {
   }
   
   div.buttons {
-    z-index: 2;
     padding: 1rem 1.5rem;
     min-height: 60%;
     min-width: 100%;
