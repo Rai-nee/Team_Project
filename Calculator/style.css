@@ -1,0 +1,177 @@
+/* Global variables that keep track of the color */
+:root {
+  --light-primary: white;
+  --light-secondary: rgb(249, 249, 249);
+  --green: #24d6b6;
+  --red: #e46364;
+  --dark-primary: rgb(26, 27, 34);
+  --dark-secondary: rgb(31, 33, 40);
+}
+div.light {
+  background-color: var(--light-primary);
+}
+
+div.light {
+  color: black;
+}
+div.light div#switcher button,
+div.light div.buttons button,
+div.light div.buttons {
+  background-color: var(--light-secondary);
+}
+
+div.light div#switcher :nth-child(2) {
+  color: #ccc;
+}
+
+div.dark {
+  background-color: var(--dark-primary);
+}
+div.dark,
+div.dark div#switcher button,
+div.dark div.buttons button {
+  color: white;
+}
+div.dark div#switcher button,
+div.dark div.buttons button,
+div.dark div.buttons {
+  background-color: var(--dark-secondary);
+}
+
+div.dark div#switcher :nth-child(1) {
+  color: #ccc;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+div#switcher {
+  margin-top: 15px;
+  height: 10%;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+div#switcher button {
+  margin: 0;
+  border: none;
+  width: 13%;
+}
+
+div#switcher button:hover {
+  cursor: pointer;
+}
+
+div#switcher :nth-child(1) {
+  border-radius: 20px 0px 0px 20px;
+  font-size: 1.5rem;
+}
+
+div#switcher :nth-child(2) {
+  border-radius: 0px 20px 20px 0px;
+  font-size: 1rem;
+}
+
+div.phone {
+  justify-content: center;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.188);
+  height: 75vh;
+  width: 25vw;
+  border-radius: 20px;
+}
+
+div.result-box {
+  min-height: 30%;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+div.result-box div#calc {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+div.result-box div#total {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* trick to make the containers keep their height */
+div#total::after,
+div#calc::after {
+  content: "";
+  display: inline-block;
+}
+
+div.buttons {
+  z-index: 2;
+  padding: 1rem 1.5rem;
+  min-height: 60%;
+  min-width: 100%;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
+  grid-column-gap: 12px;
+  grid-row-gap: 8px;
+}
+
+div.buttons button {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 8px;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+div.buttons button:hover {
+  cursor: pointer;
+  box-shadow: 2px 0 1rem rgba(0, 0, 0, 0.15);
+}
+
+div.buttons button:nth-child(n + 1):nth-child(-n + 3) {
+  color: var(--green);
+}
+div.buttons button#equals {
+  color: var(--red);
+}
+div.buttons button:nth-child(4n) {
+  color: var(--red) !important;
+}
+div.buttons button.zero {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+@media only screen and (max-width: 500px) {
+  div.phone {
+    width: 90vw;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  div.phone {
+    width: 70vw;
+  }
+}
