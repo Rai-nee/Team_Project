@@ -192,50 +192,45 @@ section {
 
 /* Global variables that keep track of the color */
 :root {
-    --light-primary: white;
-    --light-secondary: rgb(249, 249, 249);
     --green: #24d6b6;
     --red: #e46364;
-    --dark-primary: rgb(26, 27, 34);
-    --dark-secondary: rgb(31, 33, 40);
+    
   }
   
+  [data-theme = "Light"] {
+    --primary: white;
+    --secondary: rgb(249, 249, 249);
+    --text: black;
+    --active: black;
+    --inactive: #ccc;
+
+  }
+
+  [data-theme = "Dark"] {
+    --primary: rgb(26, 27, 34);
+    --secondary: rgb(31, 33, 40);
+    --text: white;
+    --active: white;
+    --inactive: #777;
+
+  }
   * {
     transition: all 0.3s ease-in-out;
   }
-  div.light {
-    background-color: var(--light-primary);
+
+
+  div#switcher button,
+  div.buttons button,
+  div.buttons {
+    background-color: var(--secondary);
   }
   
-  div.light {
-    color: black;
-  }
-  div.light div#switcher button,
-  div.light div.buttons button,
-  div.light div.buttons {
-    background-color: var(--light-secondary);
+  div#switcher button.inactive {
+    color: var(--inactive)
   }
   
-  div.light div#switcher :nth-child(2) {
-    color: #ccc;
-  }
-  
-  div.dark {
-    background-color: var(--dark-primary);
-  }
-  div.dark,
-  div.dark div#switcher button,
-  div.dark div.buttons button {
-    color: white;
-  }
-  div.dark div#switcher button,
-  div.dark div.buttons button,
-  div.dark div.buttons {
-    background-color: var(--dark-secondary);
-  }
-  
-  div.dark div#switcher :nth-child(1) {
-    color: #ccc;
+  div#switcher button.active {
+    color: var(--active)
   }
 
   /* section.padding {
@@ -301,6 +296,7 @@ section {
     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.188);
     height: 75%;
     width: 30%;
+    background-color: var(--primary);
     border-radius: 20px;
   }
   
@@ -312,15 +308,18 @@ section {
     align-items: flex-end;
     justify-content: flex-end;
     padding: 20px;
+    color: var(--text);
   }
   
   div.result-box div#calc {
     font-size: 1.5rem;
     font-weight: bold;
+    color: var(--text);
   }
   div.result-box div#total {
     font-size: 2.5rem;
     font-weight: bold;
+    color: var(--text);
   }
   
   /* trick to make the containers keep their height */
@@ -346,6 +345,7 @@ section {
   div.buttons button {
     width: 100%;
     padding: 0.5rem;
+    color: var(--text);
     border-radius: 8px;
     outline: none;
     border: none;

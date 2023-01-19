@@ -69,11 +69,15 @@ const handleButtons = (event) => {
 // Event listeners
 // Set's the class of the calculator to `dark`
 dark_button.addEventListener("click", () => {
-  calculator.className = "dark phone";
+  document.querySelector("html").setAttribute("data-theme", "Dark");
+  dark_button.className = "active";
+  light_button.className = "inactive";
 });
 // Set's the class of the calculator to `dark`
 light_button.addEventListener("click", () => {
-  calculator.className = "light phone";
+  document.querySelector("html").setAttribute("data-theme", "Light");
+  light_button.className = "active";
+  dark_button.className = "inactive";
 });
 equal.addEventListener("click", () => {
   getResult();
