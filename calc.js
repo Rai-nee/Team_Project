@@ -99,15 +99,15 @@ for (let index = 0; index < operators.length; index++) {
   const element = operators[index];
   element.addEventListener("click", handleOperators);
 }
-window.addEventListener("keydown", (ev) => {
-  ev.preventDefault();
-  if (/[0-9+\-*%./]+/.test(ev.key)) {
-    handleInput(ev.key);
-  } else if (ev.keyCode == 13) {
-    getResult();
-  } else if (ev.keyCode == 8) {
-    handleBackspace();
-  } else if (ev.keyCode == 27) {
-    handleClear();
-  }
-});
+// window.addEventListener("keydown", (ev) => {
+//   ev.preventDefault();
+//   if (/[0-9+\-*%./]+/.test(ev.key)) {
+//     handleInput(ev.key);
+//   } else if (ev.keyCode == 13) {
+//     getResult();
+//   } else if (ev.keyCode == 8) {
+//     handleBackspace();
+//   } else if (ev.keyCode == 27) {
+//     handleClear();
+//   }
+// });

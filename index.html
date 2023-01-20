@@ -79,7 +79,7 @@
         we view math forever met and created something beautiful
       </p>
 
-      <div class="info" id="bioD">
+      <div class="info" id="dam">
         <div class="us">
           <img src="images/ade.jpg" alt="ade" />
           <p>
@@ -170,7 +170,64 @@
         </div>
       </div>
     </section>
+    <section class="container">
+      <h2>Join our Team!</h2>
+      <form class="dform" id="form">
+        <label for="fname">Full Name</label>
+        <input
+          type="text"
+          id="fname"
+          name="firstname"
+          placeholder="Your Full name.."
+        />
 
+        <label for="Matric Number">Matric Number</label>
+        <input
+          type="text"
+          id="mnum"
+          name="Matric Number"
+          placeholder="Your Matric Number.."
+        />
+
+        <label for="Gender">Gender</label>
+        <select id="gender" name="Gender">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+
+        <label for="Hobby">Hobby</label>
+        <input type="text" id="hobby" name="Hobby" placeholder="Your Hobby.." />
+        <label for="Course">Course</label>
+        <input
+          type="text"
+          id="course"
+          name="Course"
+          placeholder="Your course.."
+        />
+        <label for="gh-name">Github Username</label>
+        <input
+          type="text"
+          id="gh-name"
+          name="gh-name"
+          placeholder="Your Github Username.."
+        />
+
+        <label for="Choose a picture">Choose a picture</label>
+        <input
+          type="file"
+          id="upload"
+          name="Choose a picture"
+          accept="image/*"
+          required
+          placeholder="Insert a Profile Picture"
+        />
+        <br />
+        <br />
+        <input id="send" type="submit" value="Submit" />
+      </form>
+    </section>
+
+    <script src="form.js"></script>
     <script src="calc.js"></script>
   </body>
 </html>
