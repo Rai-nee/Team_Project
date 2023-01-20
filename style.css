@@ -1,5 +1,5 @@
 .text {
-  margin-top: 70px;
+  font-size: 20px;
 }
 
 body {
@@ -97,7 +97,7 @@ nav {
 html {
   scroll-behavior: smooth;
 }
-
+.
 .scrolling_box {
   display: block;
   overflow-y: scroll;
