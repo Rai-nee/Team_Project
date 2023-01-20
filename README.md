@@ -2,7 +2,7 @@
 
 The link to the site:
 
-The Calculator G13 is a basic arithmetic calculator designed by;
+The Calculator G1313 OF GROUP 13 is a basic arithmetic calculator designed by;
 20CG028065 Dike Golibe Lorraine
 20CG028109 Oghedegbe Osezele
 20CG028090 Ike Ugochi Jacinta
