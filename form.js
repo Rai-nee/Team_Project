@@ -12,6 +12,7 @@ upload.addEventListener("change", handleFile, false);
 document.getElementById("form").addEventListener("submit", (e) => {
   e.preventDefault();
   handleForm();
+  document.getElementById("form").reset()
 });
 
 const handleForm = () => {
