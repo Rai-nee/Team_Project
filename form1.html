@@ -9,21 +9,15 @@
   </head>
   <body>
     <div class="container">
-      <form action="action_page.php">
-        <label for="fname">First Name</label>
+        <form action="action_page.php">
+        <h2>Join our Team!</h2>
+      <form class="dform">
+        <label for="fname">Full Name</label>
         <input
           type="text"
           id="fname"
           name="firstname"
-          placeholder="Your First name.."
-        />
-
-        <label for="lname">Last Name</label>
-        <input
-          type="text"
-          id="lname"
-          name="lastname"
-          placeholder="Your last name.."
+          placeholder="Your Full name.."
         />
 
         <label for="Matric Number">Matric Number</label>
@@ -41,10 +35,13 @@
         </select>
 
         <label for="Hobby">Hobby</label>
-        <input type="text" id="Hobby" name="Hobby" placeholder="Your Hobby..""
+        <input type="text" id="Hobby" name="Hobby" placeholder="Your Hobby.."
         />
 
-        <input type="submit" value="Submit" />
+        <label for="Choose a picture">Choose a picture</label>
+        <input type="file" id="Choose a picture" name="Choose a picture" placeholder="Insert a Profile Picture" />
+        <br> <br>
+        <input id="send" type="submit" value="Submit" />
       </form>
     </div>
   </body>
